@@ -26,10 +26,17 @@ export default function Footer() {
             <a href="https://github.com/chitranshsahrawat" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-neon-blue transition-colors">
               <Github size={24} />
             </a>
+<<<<<<< HEAD
             <a href="#" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-neon-blue transition-colors">
               <Linkedin size={24} />
             </a>
             <a href="mailto:chitranshsahrawat@gmail.com" className="text-white/40 hover:text-neon-blue transition-colors">
+=======
+            <a href="https://www.linkedin.com/in/chitranshsahrawat28930" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-neon-blue transition-colors">
+              <Linkedin size={24} />
+            </a>
+            <a href="mailto:chitranshsahrawat2930@gmail.com" className="text-white/40 hover:text-neon-blue transition-colors">
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
               <Mail size={24} />
             </a>
           </div>

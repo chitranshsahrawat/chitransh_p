@@ -1,10 +1,15 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
+<<<<<<< HEAD
 import { Github, ExternalLink, Cpu, Zap, Globe, Code } from 'lucide-react';
+=======
+import { Github, ExternalLink, Cpu, Zap, Globe, Code, Eye, Activity, LayoutDashboard } from 'lucide-react';
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
 import { cn } from '@/src/lib/utils';
 
 const projects = [
   {
     title: 'Echo-Vision',
+<<<<<<< HEAD
     subtitle: 'AI Spatial Intelligence',
     description: 'Real-time spatial awareness system for visually impaired. Uses YOLOv10 + MiDaS depth estimation optimized for Edge NPUs.',
     focus: 'Accessibility + Real-Time AI',
@@ -46,6 +51,60 @@ const projects = [
     github: 'https://github.com/chitranshsahrawat',
     demo: '#',
     icon: Code,
+=======
+    subtitle: 'Real-Time Assistive Vision',
+    description: 'On-device assistive vision system using TensorFlow.js and MediaPipe for real-time scene understanding. Features obstacle detection and Gemini-powered contextual narration.',
+    focus: 'Accessibility + Edge AI',
+    tech: ['TensorFlow.js', 'MediaPipe', 'Gemini AI', 'COCO-SSD'],
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800&h=600',
+    github: 'https://github.com/chitranshsahrawat',
+    demo: 'https://echo-vision-seven.vercel.app/',
+    icon: Eye,
+  },
+  {
+    title: 'Shadow-Sim',
+    subtitle: 'Vehicle Digital Twin',
+    description: 'Real-time vehicle digital twin platform using WebSockets and the Kinematic Bicycle Model. Implements dead-reckoning for latency compensation and z-score telemetry filtering.',
+    focus: 'Mobility + Simulation',
+    tech: ['FastAPI', 'Three.js', 'WebSockets', 'Redis'],
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800&h=600',
+    github: 'https://github.com/chitranshsahrawat',
+    demo: 'https://shadow-sim.vercel.app/',
+    icon: Globe,
+  },
+  {
+    title: 'FleetFlow',
+    subtitle: 'Real-Time Data Pipeline',
+    description: 'High-throughput telemetry pipeline for real-time fleet monitoring. Built with Kafka and a Redis-first architecture for multi-vehicle stream processing and anomaly detection.',
+    focus: 'Logistics + Data Pipeline',
+    tech: ['Kafka', 'FastAPI', 'Redis', 'PostgreSQL'],
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800&h=600',
+    github: 'https://github.com/chitranshsahrawat',
+    demo: 'http://13.53.163.137',
+    icon: Zap,
+  },
+  {
+    title: 'Neuro-Drive',
+    subtitle: 'AI Driver Monitoring',
+    description: 'AI driver monitoring system using MediaPipe and OpenCV. Tracks fatigue through EAR/MAR analysis and head pose estimation, delivering real-time alerts via SSE.',
+    focus: 'Safety + Computer Vision',
+    tech: ['MediaPipe', 'OpenCV', 'Python', 'SSE'],
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800&h=600',
+    github: 'https://github.com/chitranshsahrawat',
+    demo: '#',
+    icon: Activity,
+  },
+  {
+    title: 'HR Dashboard Management',
+    subtitle: 'Team Project (2 Members)',
+    description: 'Full HR management system with an interactive dashboard for employee details and project assignments. Integrated video calling and AI-assisted chatbot.',
+    focus: 'Full Stack + Communication',
+    tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=600',
+    github: 'https://github.com/chitranshsahrawat',
+    demo: 'https://hr-dashboard-five-dusky.vercel.app/',
+    icon: LayoutDashboard,
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
   },
   {
     title: 'Phishing Detector',
@@ -106,6 +165,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
       <div className="glass h-full rounded-3xl p-6 border-white/5 hover:border-neon-blue/30 transition-all duration-500 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
+<<<<<<< HEAD
         <div className="relative z-10 h-full flex flex-col">
           <div className="relative aspect-video rounded-2xl overflow-hidden mb-6">
             <img
@@ -129,6 +189,50 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
           <p className="text-white/60 text-sm mb-6 flex-grow leading-relaxed">
             {project.description}
           </p>
+=======
+          <div className="relative z-10 h-full flex flex-col">
+            <a 
+              href={project.demo} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative aspect-video rounded-2xl overflow-hidden mb-6 block"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute top-4 right-4 glass p-2 rounded-xl border-white/20">
+                <project.icon size={20} className="text-neon-blue" />
+              </div>
+            </a>
+            
+            <div className="mb-2 flex items-center gap-2 text-xs font-mono text-neon-blue uppercase tracking-widest">
+              <span>{project.focus}</span>
+            </div>
+            
+            <a 
+              href={project.demo} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block group/title"
+            >
+              <h3 className="text-2xl font-bold mb-1 font-display group-hover/title:text-neon-blue transition-colors">{project.title}</h3>
+            </a>
+            <p className="text-sm text-white/40 mb-4 font-display font-medium uppercase tracking-wider">{project.subtitle}</p>
+          
+            <a 
+              href={project.demo} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block flex-grow"
+            >
+              <p className="text-white/60 text-sm mb-6 leading-relaxed hover:text-white transition-colors">
+                {project.description}
+              </p>
+            </a>
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
           
           <div className="flex flex-wrap gap-2 mb-8">
             {project.tech.map((t, i) => (
@@ -151,11 +255,20 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
             </motion.a>
             <motion.a
               href={project.demo}
+<<<<<<< HEAD
+=======
+              target="_blank"
+              rel="noopener noreferrer"
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex-1 py-3 rounded-xl bg-neon-blue text-black flex items-center justify-center gap-2 text-sm font-bold glow-blue hover:brightness-110 transition-all"
             >
+<<<<<<< HEAD
               <ExternalLink size={18} /> Details
+=======
+              <ExternalLink size={18} /> Live Demo
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
             </motion.a>
           </div>
         </div>
@@ -196,7 +309,11 @@ export default function Projects() {
             className="flex items-center gap-4 text-sm font-mono text-white/40"
           >
             <span className="w-12 h-px bg-white/10" />
+<<<<<<< HEAD
             <span>05 PROJECTS TOTAL</span>
+=======
+            <span>06 PROJECTS TOTAL</span>
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
           </motion.div>
         </div>
         

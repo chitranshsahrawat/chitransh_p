@@ -12,6 +12,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
+<<<<<<< HEAD
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
     
@@ -23,6 +24,35 @@ export default function Contact() {
       origin: { y: 0.6 },
       colors: ['#00f2ff', '#bc13fe', '#ffffff']
     });
+=======
+    try {
+      const response = await fetch('https://formspree.io/f/xpwzjyqv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#00f2ff', '#bc13fe', '#ffffff']
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Something went wrong. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
   };
 
   return (
@@ -45,7 +75,11 @@ export default function Contact() {
             
             <div className="space-y-6">
               <a
+<<<<<<< HEAD
                 href="mailto:chitranshsahrawat@gmail.com"
+=======
+                href="mailto:chitranshsahrawat2930@gmail.com"
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
                 className="flex items-center gap-4 group p-4 rounded-2xl glass border-white/5 hover:border-neon-blue/30 transition-all"
               >
                 <div className="w-12 h-12 rounded-xl bg-neon-blue/10 flex items-center justify-center text-neon-blue group-hover:bg-neon-blue group-hover:text-black transition-all">
@@ -53,7 +87,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-xs text-white/40 uppercase tracking-widest font-mono">Email Me</div>
+<<<<<<< HEAD
                   <div className="text-lg font-bold font-display">chitranshsahrawat@gmail.com</div>
+=======
+                  <div className="text-lg font-bold font-display">chitranshsahrawat2930@gmail.com</div>
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
                 </div>
               </a>
               
@@ -73,7 +111,11 @@ export default function Contact() {
               </a>
               
               <a
+<<<<<<< HEAD
                 href="#"
+=======
+                href="https://www.linkedin.com/in/chitranshsahrawat28930"
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group p-4 rounded-2xl glass border-white/5 hover:border-neon-blue/30 transition-all"
@@ -83,7 +125,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-xs text-white/40 uppercase tracking-widest font-mono">LinkedIn</div>
+<<<<<<< HEAD
                   <div className="text-lg font-bold font-display">Connect with me</div>
+=======
+                  <div className="text-lg font-bold font-display">linkedin.com/in/chitranshsahrawat28930</div>
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
                 </div>
               </a>
             </div>

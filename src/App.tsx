@@ -10,7 +10,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Background from './components/Background';
 import CustomCursor from './components/CustomCursor';
+<<<<<<< HEAD
 import LoadingScreen from './components/LoadingScreen';
+=======
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
 
 export default function App() {
   useEffect(() => {
@@ -35,7 +38,10 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen">
+<<<<<<< HEAD
       <LoadingScreen />
+=======
+>>>>>>> e306a14e6715e283f0fa4cc82dda236b34b0a9b6
       <CustomCursor />
       <Background />
       <Navbar />
